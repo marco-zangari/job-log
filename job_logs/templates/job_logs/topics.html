@@ -1,0 +1,12 @@
+{% extends "job_logs/base.html" %}
+
+{% block content %}
+<p>Topics</p>
+<ul>
+    {% for topic in topics %}
+        <li>{{ topic }}</li>
+    {% empty %}
+        <li>No jobs have been added yet.</li>
+    {% endfor %}
+</ul>
+{% end block content %}
