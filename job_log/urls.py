@@ -19,7 +19,6 @@ from django.conf.urls import include, url
 from django.contrib import admin
 
 urlpatterns = [
-    # path('admin/', admin.site.urls),
-    url(r'^admin/', admin.site.urls),
-    url(r'', job_logs.urls),
+    path('admin/', admin.site.urls),
+    path('job_logs/', job_logs.urls),
 ]
