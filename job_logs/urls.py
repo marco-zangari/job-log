@@ -1,10 +1,12 @@
 """Define URL patterns for job_logs."""
 
 
-from django.conf.urls import url
+from django.urls import path
 from . import views
 
+app_name = 'job_logs'
+
 urlpatterns = [
-    url(r'^$', views.index, name='index'),
-    url(r'^topics/$', views.topics, name='topics'),
+    path('', views.index, name='index'),
+    path('topics/', views.topics, name='topics'),
 ]
