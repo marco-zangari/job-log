@@ -2,7 +2,7 @@
 
 {% block content %}
     <p>Add a new topic:</p>
-<form action="{url 'job_logs:new_topic' %}" method='post'>
+<form action="{% url 'job_logs:new_topic' %}" method='post'>
     {% csrf_token %}
     {{ form.as_p }}
     <button name="submit">add topic</button>
