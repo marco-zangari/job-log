@@ -1,4 +1,4 @@
-{% "extends job_logs/base.html" %}
+{% extends "job_logs/base.html" %}
 
 {% block content %}
 
@@ -6,7 +6,7 @@
 
 <p>Edit entry:</p>
 
-<form action="{% 'job_logs:edit_entry' entry.id %}" method='post'>
+<form action="{% url 'job_logs:edit_entry' entry.id %}" method='post'>
     {% csrf_token %}
     {{ form.as_p }}
     <button name="submit">save changes</button>
