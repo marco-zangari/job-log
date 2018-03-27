@@ -1,15 +1,21 @@
 {% extends "job_logs/base.html" %}
 
+{% block header %}
+    <h1>Jobs</h1>
+{% endblock header %}
+
 {% block content %}
-<p>Jobs</p>
 <ul>
     {% for topic in topics %}
         <li>
-            <a href="{% url 'job_logs:topic' topic.id %}">{{ topic }}</a>
+            <h3>
+                <a href="{% url 'job_logs:topic' topic.id %}">{{ topic }}</a>
+            </h3>
         </li>
     {% empty %}
         <li>No jobs have been added yet.</li>
     {% endfor %}
 </ul>
-<a href="{% url 'job_logs:new_topic' %}">Add a new job:</a>
+<h3><a href="{% url 'job_logs:new_topic' %}">Add a new job:</a></h3>
+
 {% endblock content %}
