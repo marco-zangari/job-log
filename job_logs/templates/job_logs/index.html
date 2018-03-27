@@ -1,5 +1,16 @@
 {% extends "job_logs/base.html" %}
 
+{% block header %}
+    <div class='jumbotron'>
+        <h1>Log your jobs.</h1>
+    </div>
+{% endblock header %}
+
 {% block content %}
+    <h2>
+        <a href="{% url 'users:register' %}">Register an account</a> to make your own JobLog. Get started with the jobs you're tracking.
+    </h2>
+    <h2>Whenever you track a new company, make an entry to track your contact.</h2>
+
     <p>JobLog keeps track of your jobs while you're on the job hunt</p>
 {% endblock content %}
