@@ -36,7 +36,6 @@ def topic(request, topic_id):
 @login_required
 def new_topic(request):
     """Add new topic."""
-    import pdb; pdb.set_trace()
     if request.method != 'POST':
         form = TopicForm()
     else:
